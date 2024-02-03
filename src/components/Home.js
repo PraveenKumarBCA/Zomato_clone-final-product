@@ -15,7 +15,7 @@ const Home=()=>{
   let Navigate=useNavigate();
   const GetMealTypeList=async ()=>{
     try {
-      let URL=`http://localhost:3030/api//Get-meal-type-List`;
+      let URL=`https://zomoto-clone-backend-hgaz.onrender.com/api//Get-meal-type-List`;
       let response=await fetch(URL);
       let data=await response.json();
       SetMealType(data.MealTypeResult);
@@ -29,14 +29,14 @@ const Home=()=>{
   }
 
 //   let Filterdata=async ()=>{
-//     let URL=`http://localhost:3030/api/filter`;
+//     let URL=`https://zomoto-clone-backend-hgaz.onrender.com/api/filter`;
 //     let {data}=await axios.post(URL,{mealtype:5});
 //     // SetFilterResult(data.FilterResult);
 //     console.log(data.FilterResult)
 // }
   const GetLocationList=async ()=>{
     try {
-      let URL=`http://localhost:3030/api/Get-Location-List`;
+      let URL=`https://zomoto-clone-backend-hgaz.onrender.com/api/Get-Location-List`;
       let response=await fetch(URL);
       let data=await response.json();
       SetLocationList(data.LocationResult);
@@ -48,7 +48,7 @@ const Home=()=>{
   }
   const GetRestaurentListByLocationId=async (id,name,city)=>{
     try {
-      let URL=`http://localhost:3030/api/Get-restaurent-List-By-location-id/${id}`;
+      let URL=`https://zomoto-clone-backend-hgaz.onrender.com/api/Get-restaurent-List-By-location-id/${id}`;
       let response=await fetch(URL);
       let data=await response.json();
       SetRestaurentList(data. RestaurentListResult);

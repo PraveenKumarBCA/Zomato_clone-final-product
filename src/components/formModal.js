@@ -18,7 +18,7 @@ const FormModal=()=>{
     let [loginResult,SetLoginesult]=useState("");
     const [passwordType,setPasswordType]=useState("password");
     const CreateNewUser=async ()=>{
-        let URL=`http://localhost:3030/api/create-user-account`;
+        let URL=`https://zomoto-clone-backend-hgaz.onrender.com/api/create-user-account`;
         let {data}=await axios.post(URL,NewUser);
         if(data.status==true){
             alert(data.messege);
@@ -30,7 +30,7 @@ const FormModal=()=>{
         }
     }
     const LoginUser=async ()=>{
-        let URL=`http://localhost:3030/api/user-login`;
+        let URL=`https://zomoto-clone-backend-hgaz.onrender.com/api/user-login`;
         let {data}=await axios.post(URL,{...Login});
         if(data){
           window.sessionStorage.setItem("loginResult",JSON.stringify(data.result));
