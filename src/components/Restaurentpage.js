@@ -127,7 +127,7 @@ const GetLoginResult=()=>{
         RestaurentDetails &&
         
         <section className="row">
-              <div className="modal" tabIndex="-1" id="MenuItemModal" onBlur={()=>{SetTotalprice(0)}}>
+              <div className="modal" tabIndex="-1" id="MenuItemModal" >
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
